@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Compiler_Project_Token" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رشته مورد نظر خود را وارد در فیلد زیر وارد نمایید." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ekh-VE-KaK">
+                                <rect key="frame" x="16" y="62" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="if(a+b*2&gt;67-M*3)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="APt-3X-fBx">
+                                <rect key="frame" x="16" y="91" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RZk-Ve-qTC">
+                                <rect key="frame" x="16" y="167" width="343" height="480"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Nru-yn-fc2" customClass="TableViewCell" customModule="Compiler_Project_Token" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nru-yn-fc2" id="OP0-5i-y9a">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omt-xY-Yvs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="80"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="omt-xY-Yvs" secondAttribute="trailing" id="CV7-Pc-vcB"/>
+                                                <constraint firstItem="omt-xY-Yvs" firstAttribute="leading" secondItem="OP0-5i-y9a" secondAttribute="leading" id="Ov8-yM-LBL"/>
+                                                <constraint firstItem="omt-xY-Yvs" firstAttribute="top" secondItem="OP0-5i-y9a" secondAttribute="top" id="P2X-X3-dDL"/>
+                                                <constraint firstItem="omt-xY-Yvs" firstAttribute="centerY" secondItem="OP0-5i-y9a" secondAttribute="centerY" id="nnf-a1-SF3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellLabel" destination="omt-xY-Yvs" id="7IW-5O-aLH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Dea-JI-KdD"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="7A9-j6-v9d"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9m-dn-g47">
+                                <rect key="frame" x="16" y="129" width="343" height="30"/>
+                                <state key="normal" title="نمایش توکن های این رشته"/>
+                                <connections>
+                                    <action selector="Check:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Npl-I2-BjF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RZk-Ve-qTC" firstAttribute="top" secondItem="G9m-dn-g47" secondAttribute="bottom" constant="8" symbolic="YES" id="0Wq-uj-t8N"/>
+                            <constraint firstItem="Ekh-VE-KaK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2bJ-DI-bNX"/>
+                            <constraint firstItem="APt-3X-fBx" firstAttribute="trailing" secondItem="Ekh-VE-KaK" secondAttribute="trailing" id="Ind-pk-MhC"/>
+                            <constraint firstItem="Ekh-VE-KaK" firstAttribute="leading" secondItem="RZk-Ve-qTC" secondAttribute="leading" id="KAJ-M1-U54"/>
+                            <constraint firstItem="APt-3X-fBx" firstAttribute="trailing" secondItem="G9m-dn-g47" secondAttribute="trailing" id="Kxz-38-7iL"/>
+                            <constraint firstAttribute="bottom" secondItem="RZk-Ve-qTC" secondAttribute="bottom" constant="20" symbolic="YES" id="O4N-RH-5m0"/>
+                            <constraint firstItem="Ekh-VE-KaK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="42" id="VfX-GH-IEj"/>
+                            <constraint firstItem="APt-3X-fBx" firstAttribute="bottom" secondItem="Ekh-VE-KaK" secondAttribute="bottom" constant="38" id="VlJ-ZS-DiR"/>
+                            <constraint firstItem="G9m-dn-g47" firstAttribute="bottom" secondItem="APt-3X-fBx" secondAttribute="bottom" constant="38" id="bKr-oO-cve"/>
+                            <constraint firstItem="Ekh-VE-KaK" firstAttribute="trailing" secondItem="RZk-Ve-qTC" secondAttribute="trailing" id="bmk-9M-qwu"/>
+                            <constraint firstItem="APt-3X-fBx" firstAttribute="leading" secondItem="G9m-dn-g47" secondAttribute="leading" id="jAo-JW-91U"/>
+                            <constraint firstItem="APt-3X-fBx" firstAttribute="leading" secondItem="Ekh-VE-KaK" secondAttribute="leading" id="jtZ-1O-f7N"/>
+                            <constraint firstItem="Ekh-VE-KaK" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="njA-qH-HTc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="editText" destination="APt-3X-fBx" id="rq6-Ee-SFo"/>
+                        <outlet property="tableView" destination="RZk-Ve-qTC" id="fZH-sM-Jba"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
