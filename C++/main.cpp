@@ -9,7 +9,6 @@
 //  Test = if(a+b*2>67-M*3)
 //
 
-
 #include <iostream>
 #include <string>
 using namespace std;
